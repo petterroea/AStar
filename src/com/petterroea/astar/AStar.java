@@ -6,6 +6,10 @@ import java.util.List;
 
 /**
  * ASTAR - Lightweight A* pathfinding algoritm implementation in Java
+ * Copyright (C) 2012  Liam Svanåsbakken Crouch(Known as Liam S. Crouch internationally) aka petterroea
+ * 
+ * You should of gotten a copy of the Licence with this source code, please see "LICENCE"
+ * 
  * @author Petterroea
  *
  */
