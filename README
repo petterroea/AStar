@@ -1,7 +1,7 @@
 This also functions as the manual
 
 ASTAR - A fast pathfinding implementation in Java 
-By Liam Svanåsbakken Crouch aka petterroea
+By Liam Svanï¿½sbakken Crouch aka petterroea
 
 Welcome, and thank you for trying out my first ever API, AStar! This is, as the description says, an API that lets you find the best way from A to B using the very fast pathfinding algoritm A*(Pronounced Astar).
 Currently, this API supports 2 different modes. One that allows for diagnoal pathfinding, and one that does not. Both modes are tested for bugs, the one without diagnoal pathfinding being tested the most.
@@ -11,7 +11,12 @@ The modes in java are:
 getPath(boolean[] map, int w, int h, java.awt.Point start, java.awt.Point end) 
 getPathWithDiagnoal(boolean[] map, int w, int h, java.awt.Point start, java.awt.Point end) 
 
-Both take the same arguments:
+The modes in Uno are:
+
+getPath(bool[] map, int w, int h, int2 start, int2 end) 
+getPathWithDiagnoal(bool[] map, int w, int h, int2 start, int2 end) 
+
+Both functions take the same arguments:
 
 map is a 1-dimensional array containing information on what points are solid and what points are not. It is stored in this format: x+(y*width). In this map, true means solid, and false means "transparent". The pathfinder will only navigate through the transparent points.
 w and h is the width and height of the array map, respectively.
@@ -21,3 +26,5 @@ end is where you want the destination to be.
 Please read the licence for licence information.
 
 And PLEASE; If you can, port it to your native language!
+
+Ported to Uno by petterroea
