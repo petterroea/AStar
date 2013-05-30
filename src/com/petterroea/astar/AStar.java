@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * ASTAR - Lightweight A* pathfinding algoritm implementation in Java
- * Copyright (C) 2012  Liam Svanåsbakken Crouch(Known as Liam S. Crouch internationally) aka petterroea
+ * Copyright (C) 2012  Liam Svanï¿½sbakken Crouch(Known as Liam S. Crouch internationally) aka petterroea
  * 
  * You should of gotten a copy of the Licence with this source code, please see "LICENCE"
  * 
@@ -91,34 +91,6 @@ public class AStar {
 			}
 			todoList=nextIteration; //Set the todo list as the new iteration-list
 		}
-//		for(int y = 0; y < h; y++)
-//		{
-//			String buffer="";
-//			for(int x = 0; x < w; x++)
-//			{
-//				if(x==start.x&&y==start.y)
-//				{
-//					buffer=buffer+"S  ";
-//				}
-//				else if(x==end.x&&y==end.y)
-//				{
-//					buffer=buffer+"E  ";
-//				}
-//				else
-//				{
-//					int num = numArray[x+(y*w)];
-//					if(num>9)
-//					{
-//						buffer=buffer+num+" ";
-//					}
-//					else
-//					{
-//						buffer=buffer+num+"  ";
-//					}
-//				}
-//			}
-//			System.out.println(buffer);
-//		}
 		List<Point> points = new LinkedList<Point>(); //We are done scanning, so we init a list of all points in the path back.
 		if(foundExit)
 		{
@@ -144,12 +116,8 @@ public class AStar {
 					{
 						lowestNeighbour=numArray[xat-1+(yat*w)];
 						dir="LEFT";
-						//System.out.println("YES: " + thisNum + ", LEFT: " + numArray[xat-1+(yat*w)]);
+
 					}
-//					else
-//					{
-//						System.out.println("NO: " + thisNum + ", LEFT: " + numArray[xat-1+(yat*w)]);
-//					}
 				}
 				if(yat>0) //Only check up if there is a spot upwards
 				{
@@ -157,12 +125,7 @@ public class AStar {
 					{
 						lowestNeighbour=numArray[xat+((yat-1)*w)];
 						dir="UP";
-						//System.out.println("YES: " + thisNum + ", UP: " + numArray[xat+((yat-1)*w)]);
 					}
-//					else
-//					{
-//						System.out.println("NO: " + thisNum + ", UP: " + numArray[xat+((yat-1)*w)]);
-//					}
 				}
 				if(xat<w-1) //Only check right if there is a spot to the right
 				{
@@ -170,12 +133,7 @@ public class AStar {
 					{
 						lowestNeighbour=numArray[xat+1+(yat*w)];
 						dir="RIGHT";
-						//System.out.println("YES: " + thisNum + ", RIGHT: " + numArray[xat+1+(yat*w)]);
 					}
-//					else
-//					{
-//						System.out.println("NO: " + thisNum + ", RIGHT: " + numArray[xat+1+(yat*w)]);
-//					}
 				}
 				if(yat<h-1) //Only check down if there is a spot downwards.
 				{
@@ -183,12 +141,7 @@ public class AStar {
 					{
 						lowestNeighbour=numArray[xat+((yat+1)*w)];
 						dir="DOWN";
-						//System.out.println("YES: " + thisNum + ", DOWN: " + numArray[xat+((yat+1)*w)]);
 					}
-//					else
-//					{
-//						System.out.println("NO: " + thisNum + ", DOWN: " + numArray[xat+((yat+1)*w)]);
-//					}
 				}
 				if(dir.equals("LEFT")) //Find the direction to do the next iteration with
 				{
@@ -291,34 +244,6 @@ public class AStar {
 			}
 			todoList=nextIteration; //Set the todo list as the new iteration-list
 		}
-//		for(int y = 0; y < h; y++)
-//		{
-//			String buffer="";
-//			for(int x = 0; x < w; x++)
-//			{
-//				if(x==start.x&&y==start.y)
-//				{
-//					buffer=buffer+"S  ";
-//				}
-//				else if(x==end.x&&y==end.y)
-//				{
-//					buffer=buffer+"E  ";
-//				}
-//				else
-//				{
-//					int num = numArray[x+(y*w)];
-//					if(num>9)
-//					{
-//						buffer=buffer+num+" ";
-//					}
-//					else
-//					{
-//						buffer=buffer+num+"  ";
-//					}
-//				}
-//			}
-//			System.out.println(buffer);
-//		}
 		List<Point> points = new LinkedList<Point>(); //We are done scanning, so we init a list of all points in the path back.
 		if(foundExit)
 		{
@@ -344,12 +269,7 @@ public class AStar {
 					{
 						lowestNeighbour=numArray[xat-1+(yat*w)];
 						dir="LEFT";
-						//System.out.println("YES: " + thisNum + ", LEFT: " + numArray[xat-1+(yat*w)]);
 					}
-//					else
-//					{
-//						System.out.println("NO: " + thisNum + ", LEFT: " + numArray[xat-1+(yat*w)]);
-//					}
 				}
 				if(yat>0) //Only check up if there is a spot upwards
 				{
@@ -357,12 +277,7 @@ public class AStar {
 					{
 						lowestNeighbour=numArray[xat+((yat-1)*w)];
 						dir="UP";
-						//System.out.println("YES: " + thisNum + ", UP: " + numArray[xat+((yat-1)*w)]);
 					}
-//					else
-//					{
-//						System.out.println("NO: " + thisNum + ", UP: " + numArray[xat+((yat-1)*w)]);
-//					}
 				}
 				if(xat<w-1) //Only check right if there is a spot to the right
 				{
@@ -370,12 +285,7 @@ public class AStar {
 					{
 						lowestNeighbour=numArray[xat+1+(yat*w)];
 						dir="RIGHT";
-						//System.out.println("YES: " + thisNum + ", RIGHT: " + numArray[xat+1+(yat*w)]);
 					}
-//					else
-//					{
-//						System.out.println("NO: " + thisNum + ", RIGHT: " + numArray[xat+1+(yat*w)]);
-//					}
 				}
 				if(yat<h-1) //Only check down if there is a spot downwards.
 				{
@@ -383,12 +293,7 @@ public class AStar {
 					{
 						lowestNeighbour=numArray[xat+((yat+1)*w)];
 						dir="DOWN";
-						//System.out.println("YES: " + thisNum + ", DOWN: " + numArray[xat+((yat+1)*w)]);
 					}
-//					else
-//					{
-//						System.out.println("NO: " + thisNum + ", DOWN: " + numArray[xat+((yat+1)*w)]);
-//					}
 				}
 				if(yat>0&&xat>0)
 				{
@@ -396,12 +301,7 @@ public class AStar {
 					{
 						lowestNeighbour=numArray[xat-1+((yat-1)*w)];
 						dir="LEFTUP";
-						//System.out.println("YES: " + thisNum + ", LEFTUP: " + numArray[xat-1+((yat-1)*w)]);
 					}
-//					else
-//					{
-//						System.out.println("NO: " + thisNum + ", LEFTUP: " + numArray[xat-1+((yat-1)*w)]);
-//					}
 				}
 				if(yat>0&&xat<h-1)
 				{
@@ -409,12 +309,7 @@ public class AStar {
 					{
 						lowestNeighbour=numArray[xat+1+((yat-1)*w)];
 						dir="RIGHTUP";
-						//System.out.println("YES: " + thisNum + ", RIGHTUP: " + numArray[xat+1+((yat-1)*w)]);
 					}
-//					else
-//					{
-//						System.out.println("NO: " + thisNum + ", RIGHTUP: " + numArray[xat+1+((yat-1)*w)]);
-//					}
 				}
 				if(yat<w-1&&xat<h-1)
 				{
@@ -422,12 +317,7 @@ public class AStar {
 					{
 						lowestNeighbour=numArray[xat+1+((yat+1)*w)];
 						dir="RIGHTDOWN";
-						//System.out.println("YES: " + thisNum + ", RIGHTDOWN: " + numArray[xat+1+((yat+1)*w)]);
 					}
-//					else
-//					{
-//						System.out.println("NO: " + thisNum + ", RIGHTDOWN: " + numArray[xat+1+((yat+1)*w)]);
-//					}
 				}
 				if(yat<w-1&&xat>0)
 				{
@@ -435,12 +325,7 @@ public class AStar {
 					{
 						lowestNeighbour=numArray[xat-1+((yat+1)*w)];
 						dir="LEFTDOWN";
-						//System.out.println("YES: " + thisNum + ", LEFTDOWN: " + numArray[xat-1+((yat+1)*w)]);
 					}
-//					else
-//					{
-//						System.out.println("NO: " + thisNum + ", LEFTDOWN: " + numArray[xat-1+((yat+1)*w)]);
-//					}
 				}
 				if(dir.equals("LEFT")) //Find the direction to do the next iteration with
 				{
